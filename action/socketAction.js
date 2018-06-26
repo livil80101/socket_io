@@ -1,7 +1,7 @@
 module.exports = function (server) {
-    let socketio = require("socket.io");
+    var socketio = require("socket.io");
 
-    let io = socketio.listen(server);
+    var io = socketio.listen(server);
 
     io.sockets.on("connection", function (socket) {
         io.emit("oneJoin", {});
